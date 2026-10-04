@@ -2,7 +2,12 @@ import './App.css'
 
 function App() {
 
-  return <Header name = 'Rameez' profession = 'Software Developer' />  
+  return (
+  <>
+  <Header name = 'Rameez' profession = 'Software Developer' /> 
+  <Main dash = {item} />
+  </>
+  )
 }
 
 export default App
@@ -14,4 +19,24 @@ function Header(props) {
        <h1>Welcome {`${name} ${profession}`}  </h1>
     </header>
    )
+};
+
+const item = [
+  'Ali UI and UX Developer',
+  'Ahmad AI Engineer',
+  'Raees YouTuber'
+];
+
+function Main({dash}) {
+   return(
+    <ul>
+        {
+          dash.map((item,index) => {
+            return <li key={index}>
+                      {item}
+                  </li>
+          })
+        }
+    </ul>
+  ) 
 };
