@@ -32,7 +32,7 @@ function Main({dash}) {
     <ul>
         {
           dash.map((item,index) => {
-            return <li key={index}>
+            return <li style={{listStyle: "none"}} key={index}>
                       {item}
                   </li>
           })
